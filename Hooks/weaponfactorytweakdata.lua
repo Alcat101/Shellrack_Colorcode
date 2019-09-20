@@ -53,7 +53,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 				self[wpn_id].override[ammo_id].override = self[wpn_id].override[ammo_id].override or {}
 				self[wpn_id].override[ammo_id].override[rack_id] = {
 					material_config = Idstring( matcfg_path )
-					thq_material_config = Idstring( matcfg_path + "_thq" )
+					thq_material_config = Idstring( matcfg_path + "_thq" ) --not sure this is the right syntax to add additional string to the path...
 					cc_material_config = Idstring( matcfg_path + "_cc" )
 					cc_thq_material_config = Idstring( matcfg_path + "_cc_thq" )
 				}
