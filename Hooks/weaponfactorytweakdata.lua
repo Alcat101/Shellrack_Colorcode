@@ -13,7 +13,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	local shotgun_id = {
 		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_r870",
 		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_serbu",
-		-- ["wpn_fps_shot_b682_s_ammopouch"] = "wpn_fps_shot_b682",
+		["wpn_fps_shot_b682_s_ammopouch"] = "wpn_fps_shot_b682",
 		["wpn_fps_shot_ben_upg_rack"] = "wpn_fps_sho_ben"
 	}
 	
@@ -24,12 +24,12 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/Flechette_texture/r870_Flechette_rack",
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/HEslug_texture/r870_HE_rack"
 		},
-		-- ["wpn_fps_shot_b682_s_ammopouch"] = {
-			-- ["wpn_fps_upg_a_slug"] = "units/mods/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_APrack",
-			-- ["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_Dragonrack",
-			-- ["wpn_fps_upg_a_piercing"] = "units/mods/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_Flechetterack",
-			-- ["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_HErack"
-		-- },
+		["wpn_fps_shot_b682_s_ammopouch"] = {
+			["wpn_fps_upg_a_slug"] = "units/mods/weapons/APslug_texture/b682_AP_ammopouch",
+			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch",
+			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch",
+			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/HEslug_texture/b682_HE_ammopouch"
+		},
 		["wpn_fps_shot_ben_upg_rack"] = {
 			["wpn_fps_upg_a_slug"] = "units/mods/weapons/APslug_texture/r870_AP_rack",
 			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack",
@@ -48,6 +48,8 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 				else
 					self[wpn_id].override[ammo_id] = {}
 				end
+				--do we need weapon override first, before getting to shell override of the rack's slug mat_cfg?
+				--cant we just ditch the first weapon override, and just do shell override for all rack attachment to change its mat_cfg path
 				self[wpn_id].override[ammo_id].override = self[wpn_id].override[ammo_id].override or {}
 				self[wpn_id].override[ammo_id].override[rack_id] = {
 					material_config = Idstring( matcfg_path )

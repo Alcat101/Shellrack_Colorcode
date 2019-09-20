@@ -20,24 +20,40 @@
 		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_thq"/>
 		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_cc"/>
 		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch_cc_thq"/>
 		<!--Dragonsbreath matcfg-->
 		<df_nm path="units/mods/weapons/Dragonsbreath_texture/Dragonslug"/>
 		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack"/>
 		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_thq"/>
 		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_cc"/>
 		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch_cc_thq"/>
 		<!--Flechette shell matcfg-->
 		<texture path="units/mods/weapons/Flechette_texture/Flechetteslug_df"/>
 		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack"/>
 		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_thq"/>
 		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_cc"/>
 		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch_cc_thq"/>
 		<!--HE slug matcfg-->
 		<df_nm path="units/mods/weapons/HEslug_texture/HEslug"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_thq"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch_cc_thq"/>
 
 		
 		
@@ -47,7 +63,7 @@
 		
 		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_ben_upg_rack"/>
 		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_spas12_upg_rack"/>
-		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_m37_upg_rack"/>
+		<!-- <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_m37_upg_rack"/> -->
 		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_ksg_upg_rack"/>
 	</AddFiles>
 	
