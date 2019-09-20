@@ -14,12 +14,32 @@
 	
 	
 	<AddFiles directory="assets">
+		<!--AP slug matcfg-->
+		<df_nm path="units/mods/weapons/APslug_texture/APslug"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_thq"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_cc"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_cc_thq"/>
+		<!--Dragonsbreath matcfg-->
+		<df_nm path="units/mods/weapons/Dragonsbreath_texture/Dragonslug"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_thq"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_cc"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_cc_thq"/>
+		<!--Flechette shell matcfg-->
+		<texture path="units/mods/weapons/Flechette_texture/Flechetteslug_df"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_thq"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_cc"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_cc_thq"/>
+		<!--HE slug matcfg-->
 		<df_nm path="units/mods/weapons/HEslug_texture/HEslug"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_thq"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc"/>
 		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc_thq"/>
 
+		
 		
 		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_upg_shellrack/wpn_fps_shot_upg_body_rack"/>
 		

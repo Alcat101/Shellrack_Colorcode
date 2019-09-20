@@ -11,19 +11,19 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	
 	--
 	local shotgun_id = {
-		-- ["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_r870",
-		-- ["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_serbu",
+		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_r870",
+		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_serbu",
 		-- ["wpn_fps_shot_b682_s_ammopouch"] = "wpn_fps_shot_b682",
 		["wpn_fps_shot_ben_upg_rack"] = "wpn_fps_sho_ben"
 	}
 	
 	local shell_id = {
-		-- ["wpn_fps_shot_r870_body_rack"] = {
-			-- ["wpn_fps_upg_a_slug"] = "units/mods/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_APrack",
-			-- ["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_Dragonrack",
-			-- ["wpn_fps_upg_a_piercing"] = "units/mods/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_Flechetterack",
-			-- ["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_HErack"
-		-- },
+		["wpn_fps_shot_r870_body_rack"] = {
+			["wpn_fps_upg_a_slug"] = "units/mods/weapons/APslug_texture/r870_AP_rack",
+			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack",
+			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/Flechette_texture/r870_Flechette_rack",
+			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/HEslug_texture/r870_HE_rack"
+		},
 		-- ["wpn_fps_shot_b682_s_ammopouch"] = {
 			-- ["wpn_fps_upg_a_slug"] = "units/mods/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_APrack",
 			-- ["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_Dragonrack",
@@ -31,9 +31,9 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			-- ["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_HErack"
 		-- },
 		["wpn_fps_shot_ben_upg_rack"] = {
-			-- ["wpn_fps_upg_a_slug"] = "units/mods/weapons/wpn_fps_sho_ben_pts/wpn_fps_sho_ben_APrack",
-			-- ["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/wpn_fps_sho_ben_pts/wpn_fps_sho_ben_Dragonrack",
-			-- ["wpn_fps_upg_a_piercing"] = "units/mods/weapons/wpn_fps_sho_ben_pts/wpn_fps_sho_ben_Flechetterack",
+			["wpn_fps_upg_a_slug"] = "units/mods/weapons/APslug_texture/r870_AP_rack",
+			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack",
+			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/Flechette_texture/r870_Flechette_rack",
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/HEslug_texture/r870_HE_rack"
 		}
 	}
