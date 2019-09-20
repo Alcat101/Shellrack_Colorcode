@@ -1,0 +1,11 @@
+<dynamic_object>
+    <diesel materials="units/mods/weapons/wpn_fps_shot_upg_shellrack/wpn_fps_shot_upg_body_rack" orientation_object="rp_wpn_fps_shot_r870_body_rack"/>
+    <graphics>
+        <object enabled="true" name="g_slug4" />
+        <object enabled="true" name="g_slug3" />
+        <object enabled="true" name="g_slug2" />
+        <object enabled="true" name="g_slug1" />
+        <object enabled="true" name="g_slug" />
+        <object enabled="true" name="g_shellrack" />
+    </graphics>
+</dynamic_object>

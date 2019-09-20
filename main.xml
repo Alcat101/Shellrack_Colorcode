@@ -1,0 +1,39 @@
+<mod name="Shell Rack Attachment" author="Alcat" min_lib_ver="3.38" color="Color(0, 0.1, 0.5)">
+
+	<Localization directory="Localization" default="english.txt"/>
+	
+	<AssetUpdates id="26xxx" provider="modworkshop"/>
+	
+	
+	<WeaponMod id="wpn_fps_shot_ben_upg_rack" based_on="wpn_fps_shot_r870_body_rack" type="upper_reciever" a_obj="a_rack_benelli" guess_unit="false" unit="units/mods/weapons/wpn_fps_shot_upg_shellrack/wpn_fps_shot_upg_body_rack" texture_bundle_folder="mods" ver="2">
+		<stats concealment="-1" extra_ammo="0" total_ammo_mod="2"/>
+		<weapons>
+			<value_node value="wpn_fps_sho_ben"/>
+		</weapons>
+	</WeaponMod>
+	
+	
+	<AddFiles directory="assets">
+		<df_nm path="units/mods/weapons/HEslug_texture/HEslug"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_thq"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc_thq"/>
+
+		
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_upg_shellrack/wpn_fps_shot_upg_body_rack"/>
+		
+
+		
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_ben_upg_rack"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_spas12_upg_rack"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_m37_upg_rack"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_ksg_upg_rack"/>
+	</AddFiles>
+	
+	<Hooks directory="Hooks">
+		<hook file="weaponfactorytweakdata.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
+		<hook file="weapontweakdata.lua" source_file="lib/tweak_data/weapontweakdata"/>
+	</Hooks>
+	
+</mod>
