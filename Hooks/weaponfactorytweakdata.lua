@@ -39,27 +39,18 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	}
 	
 	for rack_id, wpn_id in pairs(shotgun_id) do
-		self[wpn_id].override = self[wpn_id].override or {}
-		
 		for ammo_id, matcfg_path in pairs(shell_id[rack_id]) do
 			if self.parts[ammo_id] then
-				if self.parts[ammo_id].override then 
-					self[wpn_id].override[ammo_id] = deep_clone(self.parts[ammo_id].override) -- I would do it with an 'or {}' if the game wasn't retarded "tAbLe eXpEctEd" bullshit, as if there couldn't be checks for that instead of crashing
-				else
-					self[wpn_id].override[ammo_id] = {}
-				end
-				--do we need weapon override first, before getting to shell override of the rack's slug mat_cfg?
-				--cant we just ditch the first weapon override, and just do shell override for all rack attachment to change its mat_cfg path
-				self[wpn_id].override[ammo_id].override = self[wpn_id].override[ammo_id].override or {}
-				self[wpn_id].override[ammo_id].override[rack_id] = {
+				--log("COLOR_TEST " .. self.parts[rack_id].material_config)
+				self.parts[ammo_id].override = self.parts[ammo_id].override or {}
+				self.parts[ammo_id].override[rack_id] = {
 					material_config = Idstring( matcfg_path ),
-					thq_material_config = Idstring( matcfg_path .. "_thq" ), --not sure this is the right syntax to add additional string to the path...
+					thq_material_config = Idstring( matcfg_path .. "_thq" ),
 					cc_material_config = Idstring( matcfg_path .. "_cc" ),
 					cc_thq_material_config = Idstring( matcfg_path .. "_cc_thq" )
 				}
 			end
 		end
-		
 	end
 
 end )
