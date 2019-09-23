@@ -36,17 +36,13 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/HEslug_texture/r870_HE_rack"
 		}
 	}
-	log("COLOR_TEST0 ")
 	for rack_id, mat_id in pairs(rack_matcfg) do
 		self.parts[rack_id].material_config = Idstring( mat_id )
 		self.parts[rack_id].thq_material_config = Idstring( mat_id .. "_thq" )
 		self.parts[rack_id].cc_material_config = Idstring( mat_id .. "_cc" )
 		self.parts[rack_id].cc_thq_material_config = Idstring( mat_id .. "_cc_thq" )
-		log("COLOR_TEST1 ")
 		for ammo_id, matcfg_path in pairs(shell_id[rack_id]) do
-			log("COLOR_TESTpre2 ")
 			if self.parts[ammo_id] then
-				log("COLOR_TEST2 ")
 				self.parts[ammo_id].override = self.parts[ammo_id].override or {}
 				self.parts[ammo_id].override[rack_id] = {
 					material_config = Idstring( matcfg_path ),
