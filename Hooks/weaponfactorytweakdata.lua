@@ -10,11 +10,10 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	]]--
 	
 	--
-	local shotgun_id = {
-		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_r870",
-		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_serbu",
-		["wpn_fps_shot_b682_s_ammopouch"] = "wpn_fps_shot_b682",
-		["wpn_fps_shot_ben_upg_rack"] = "wpn_fps_sho_ben"
+	local rack_matcfg = {
+		["wpn_fps_shot_r870_body_rack"] = "units/payday2/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_body_rack",
+		["wpn_fps_shot_b682_s_ammopouch"] = "units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_s_ammopouch",
+		["wpn_fps_shot_ben_upg_rack"] = "units/payday2/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_body_rack"
 	}
 	
 	local shell_id = {
@@ -37,11 +36,17 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/HEslug_texture/r870_HE_rack"
 		}
 	}
-	
-	for rack_id, wpn_id in pairs(shotgun_id) do
+	log("COLOR_TEST0 ")
+	for rack_id, mat_id in pairs(rack_matcfg) do
+		self.parts[rack_id].material_config = Idstring( mat_id )
+		self.parts[rack_id].thq_material_config = Idstring( mat_id .. "_thq" )
+		self.parts[rack_id].cc_material_config = Idstring( mat_id .. "_cc" )
+		self.parts[rack_id].cc_thq_material_config = Idstring( mat_id .. "_cc_thq" )
+		log("COLOR_TEST1 ")
 		for ammo_id, matcfg_path in pairs(shell_id[rack_id]) do
+			log("COLOR_TESTpre2 ")
 			if self.parts[ammo_id] then
-				--log("COLOR_TEST " .. self.parts[rack_id].material_config)
+				log("COLOR_TEST2 ")
 				self.parts[ammo_id].override = self.parts[ammo_id].override or {}
 				self.parts[ammo_id].override[rack_id] = {
 					material_config = Idstring( matcfg_path ),
