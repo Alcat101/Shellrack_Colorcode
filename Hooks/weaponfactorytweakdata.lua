@@ -80,6 +80,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 		end
 	end
 	
+	
 	--support for custom gun/attachment
 	if BeardLib.Utils:FindMod("GSPS Various Attachment") then
 		for ammo_id, matcfg_path in pairs(shell_id["wpn_fps_shot_m37_s_rack"]) do
@@ -91,5 +92,38 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			end
 		end
 	end
+	
+	if BeardLib.Utils:FindMod("TOZ-194") then
+		--already supported by default, since its just reusing r870 rack part tweak data
+	end
+	
+	if BeardLib.Utils:FindMod("Browning Auto Shotgun") then
+		--already supported by default, since its just reusing r870 rack part tweak data
+	end
+	
+	-- if BeardLib.Utils:FindMod("Trench Shotgun") then
+		--coming with the mod rework
+	-- end
+	
+	-- if BeardLib.Utils:FindMod("Baikal MP-153") then
+		--reused r870 shell rack for this gun should be easy... question is, when would I add to it, I guess xd
+	-- end
+	
+	-- if BeardLib.Utils:FindMod("Mosocni Various Attch") then
+		--had some idea for this, probably gonna do stock rack. parts will probably come from RS2V IZH-58 shotgun
+	-- end
+	
+	-- if BeardLib.Utils:FindMod("KS-23") then
+		--hmm, adding a BIG rack for a BIG slug... intersting
+	-- end
+
+	-- if BeardLib.Utils:FindMod("novas") then --Nova Shotgun
+		--probably when I came back to it to add more stuff to it..
+	-- end
+
+	-- if BeardLib.Utils:FindMod("PLA Pack - Hawk97") then
+		--when Im assed enough to update most of the gun on the PLA Pack
+		--on 2nd thought, I probably wont add shellrack to this gun. It's mag-fed, while this mod is largely for pump-action, tube-mag shotgun
+	-- end
 
 end )
