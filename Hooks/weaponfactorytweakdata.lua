@@ -42,10 +42,11 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	}
 	
 	
-	--for loop to apply different shell color texture
+	--for loop to apply different shell color texture to vanilla gun
 	local rack_matcfg = {
 		["wpn_fps_shot_r870_body_rack"] = "units/payday2/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_body_rack",
-		["wpn_fps_shot_b682_s_ammopouch"] = "units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_s_ammopouch"
+		["wpn_fps_shot_b682_s_ammopouch"] = "units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_s_ammopouch",
+		["wpn_fps_shot_m37_s_rack"] = "units/mods/weapons/wpn_fps_shot_m37_pts/wpn_fps_shot_m37_s_rack"
 	}
 	
 	local shell_id = {
@@ -60,6 +61,12 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch",
 			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch",
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/HEslug_texture/b682_HE_ammopouch"
+		},
+		["wpn_fps_shot_m37_s_rack"] = {
+			["wpn_fps_upg_a_slug"] = "units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_AP_stockrack",
+			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Dragon_stockrack",
+			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Flechette_stockrack",
+			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack"
 		}
 	}
 	for rack_id, mat_id in pairs(rack_matcfg) do
@@ -67,6 +74,18 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			if self.parts[ammo_id] then
 				self.parts[ammo_id].override = self.parts[ammo_id].override or {}
 				self.parts[ammo_id].override[rack_id] = { 
+					unit = matcfg_path
+				}
+			end
+		end
+	end
+	
+	--support for custom gun/attachment
+	if BeardLib.Utils:FindMod("GSPS Various Attachment") then
+		for ammo_id, matcfg_path in pairs(shell_id["wpn_fps_shot_m37_s_rack"]) do
+			if self.parts[ammo_id] then
+				self.parts[ammo_id].override = self.parts[ammo_id].override or {}
+				self.parts[ammo_id].override.wpn_fps_shot_m37_s_rack = { 
 					unit = matcfg_path
 				}
 			end

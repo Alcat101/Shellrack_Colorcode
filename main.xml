@@ -35,8 +35,11 @@
 		<unit_mat_cc path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch"/>
 
 		
-		
-		<!-- <unit_mat_cc path="units/mods/weapons/wpn_fps_shot_upg_shellrack/wpn_fps_shot_upg_body_rack"/> -->
+		<!--GSPS Various Attch support-->
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_AP_stockrack"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Dragon_stockrack"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Flechette_stockrack"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack"/>
 		
 
 		
