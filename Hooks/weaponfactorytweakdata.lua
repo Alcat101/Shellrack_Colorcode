@@ -1,6 +1,6 @@
 Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(self)
 
-	--giving other pump-action shotgun the shell rack attch
+	--giving vanilla pump-action shotgun the shell rack attch
 	--benelli m1014
 	table.list_append(self.wpn_fps_sho_ben.uses_parts, {"wpn_fps_shot_r870_body_rack"})
 	table.list_append(self.wpn_fps_sho_ben_npc.uses_parts, {"wpn_fps_shot_r870_body_rack"})
@@ -42,7 +42,9 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	}
 	
 	
+	--[[==================================================================================================================================================================]]
 	--for loop to apply different shell color texture to vanilla gun
+	--table, shell rack attch identifier, that match the ammo and its slug texture change
 	local rack_matcfg = {
 		["wpn_fps_shot_r870_body_rack"] = "units/payday2/weapons/wpn_fps_shot_r870_pts/wpn_fps_shot_r870_body_rack",
 		["wpn_fps_shot_b682_s_ammopouch"] = "units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/wpn_fps_shot_b682_s_ammopouch",
@@ -69,6 +71,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack"
 		}
 	}
+	--vanilla for loop texture change applier
 	for rack_id, mat_id in pairs(rack_matcfg) do
 		for ammo_id, matcfg_path in pairs(shell_id[rack_id]) do
 			if self.parts[ammo_id] then
@@ -81,7 +84,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	end
 	
 	
-	--support for custom gun/attachment
+	--custom gun/attachment support
 	if BeardLib.Utils:FindMod("GSPS Various Attachment") then
 		for ammo_id, matcfg_path in pairs(shell_id["wpn_fps_shot_m37_s_rack"]) do
 			if self.parts[ammo_id] then
@@ -101,16 +104,16 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 		--already supported by default, since its just reusing r870 rack part tweak data
 	end
 	
-	-- if BeardLib.Utils:FindMod("Trench Shotgun") then
-		--coming with the mod rework
+	-- if BeardLib.Utils:FindMod("Mosocni Various Attch") then
+		--had some idea for this, probably gonna do stock rack. parts will probably come from RS2V IZH-58 shotgun
 	-- end
 	
 	-- if BeardLib.Utils:FindMod("Baikal MP-153") then
 		--reused r870 shell rack for this gun should be easy... question is, when would I add to it, I guess xd
 	-- end
 	
-	-- if BeardLib.Utils:FindMod("Mosocni Various Attch") then
-		--had some idea for this, probably gonna do stock rack. parts will probably come from RS2V IZH-58 shotgun
+	-- if BeardLib.Utils:FindMod("Trench Shotgun") then
+		--coming with the mod rework
 	-- end
 	
 	-- if BeardLib.Utils:FindMod("KS-23") then
@@ -121,9 +124,8 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 		--probably when I came back to it to add more stuff to it..
 	-- end
 
-	-- if BeardLib.Utils:FindMod("PLA Pack - Hawk97") then
+	-- if BeardLib.Utils:FindMod("PLA Pack - QBS-09") then
 		--when Im assed enough to update most of the gun on the PLA Pack
-		--on 2nd thought, I probably wont add shellrack to this gun. It's mag-fed, while this mod is largely for pump-action, tube-mag shotgun
 	-- end
 
 end )
