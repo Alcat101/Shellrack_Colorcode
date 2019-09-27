@@ -42,6 +42,13 @@
 		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack"/>
 		
 
+		<!--Mosconi Various Attch support-->
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_AP_stockpouch"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Flechette_stockpouch"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch"/>
+		
+
 		
 		<!-- <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_ben_upg_rack"/> -->
 		<!-- <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_spas12_upg_rack"/> -->

@@ -20,5 +20,15 @@ Hooks:PostHook(WeaponTweakData, "init", "ShellrackModInit", function(self)
 		position = Vector3( 1, -10.5, 6 ),
 		rotation = RotationCAP(0, 0, 160)
 	})
+	
+	if BeardLib.Utils:FindMod("Baikal MP-153") then
+		self:SetupAttachmentPoint( "mp153", {
+			name = "a_rack_mp153",
+			base_a_obj = "a_body",
+			position = Vector3( 0, 20, 8 ),
+			rotation = RotationCAP(0, 0, 0)
+		})
+	end
+	
 
 end)
