@@ -47,11 +47,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	--table, shell rack attch identifier, that match the ammo and its slug texture change
 	--the vanilla_gun table is there to make sure the vanilla for loop only applies to vanilla gun only
 	local vanilla_gun = {
-		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_sho_ben",
-		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_sho_spas12",
-		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_sho_ksg",
 		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_r870",
-		["wpn_fps_shot_r870_body_rack"] = "wpn_fps_shot_serbu",
 		["wpn_fps_shot_b682_s_ammopouch"] = "wpn_fps_shot_b682"
 	}
 	
@@ -81,6 +77,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch"
 		}
 	}
+	
 	--vanilla for loop texture change applier
 	for rack_id, gun_id in pairs(vanilla_gun) do
 		for ammo_id, matcfg_path in pairs(shell_id[rack_id]) do
