@@ -1,6 +1,0 @@
-<unit type="wpn" slot="1">
-	<object file="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch" />
-	<extensions>
-		<extension name="unit_data" class="ScriptUnitData" />
-	</extensions>
-</unit>

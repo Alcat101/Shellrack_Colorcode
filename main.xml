@@ -12,51 +12,120 @@
 		</weapons>
 	</WeaponMod> -->
 	
-	
+
 	<AddFiles directory="assets">
 		<!--AP slug matcfg-->
 		<df_nm path="units/mods/weapons/APslug_texture/APslug"/>
-		<unit_mat_cc path="units/mods/weapons/APslug_texture/r870_AP_rack"/>
-		<unit_mat_cc path="units/mods/weapons/APslug_texture/b682_AP_ammopouch"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_thq"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_cc"/>
+		<material_config path="units/mods/weapons/APslug_texture/r870_AP_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/APslug_texture/b682_AP_ammopouch_cc_thq"/>
 		
 		<!--Dragonsbreath matcfg-->
 		<df_nm path="units/mods/weapons/Dragonsbreath_texture/Dragonslug"/>
-		<unit_mat_cc path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack"/>
-		<unit_mat_cc path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_thq"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_cc"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/r870_Dragon_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/Dragonsbreath_texture/b682_Dragon_ammopouch_cc_thq"/>
 		
 		<!--Flechette shell matcfg-->
 		<texture path="units/mods/weapons/Flechette_texture/Flechetteslug_df"/>
-		<unit_mat_cc path="units/mods/weapons/Flechette_texture/r870_Flechette_rack"/>
-		<unit_mat_cc path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_thq"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_cc"/>
+		<material_config path="units/mods/weapons/Flechette_texture/r870_Flechette_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/Flechette_texture/b682_Flechette_ammopouch_cc_thq"/>
 		
 		<!--HE slug matcfg-->
 		<df_nm path="units/mods/weapons/HEslug_texture/HEslug"/>
-		<unit_mat_cc path="units/mods/weapons/HEslug_texture/r870_HE_rack"/>
-		<unit_mat_cc path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_thq"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc"/>
+		<material_config path="units/mods/weapons/HEslug_texture/r870_HE_rack_cc_thq"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch_thq"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch_cc"/>
+		<material_config path="units/mods/weapons/HEslug_texture/b682_HE_ammopouch_cc_thq"/>
 
 		
 		<!--GSPS Various Attch support-->
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_AP_stockrack"/>
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Dragon_stockrack"/>
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Flechette_stockrack"/>
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_AP_stockrack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_AP_stockrack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_AP_stockrack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_AP_stockrack_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Dragon_stockrack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Dragon_stockrack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Dragon_stockrack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Dragon_stockrack_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Flechette_stockrack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Flechette_stockrack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Flechette_stockrack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_Flechette_stockrack_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_m37_shellrack/m37_HE_stockrack_cc_thq"/>
 		
 
 		<!--Mosconi Various Attch support-->
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_AP_stockpouch"/>
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch"/>
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Flechette_stockpouch"/>
-		<unit_mat_cc path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_AP_stockpouch"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_AP_stockpouch_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_AP_stockpouch_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_AP_stockpouch_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Flechette_stockpouch"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Flechette_stockpouch_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Flechette_stockpouch_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Flechette_stockpouch_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch_cc_thq"/>
 		
+		
+		<!--Trench Gun support-->
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_AP_srack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_AP_srack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_AP_srack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_AP_srack_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Dragon_srack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Dragon_srack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Dragon_srack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Dragon_srack_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Flechette_srack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Flechette_srack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Flechette_srack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Flechette_srack_cc_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_HE_srack"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_HE_srack_thq"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_HE_srack_cc"/>
+		<material_config path="units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_HE_srack_cc_thq"/>
+<!--
+_thq
+_cc
+_cc_thq
+-->	
 
 		
 		<!-- <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_ben_upg_rack"/> -->
-		<!-- <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_spas12_upg_rack"/> -->
-		<!-- <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_m37_upg_rack"/> -->
-		<!-- <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_ksg_upg_rack"/> -->
 	</AddFiles>
 	
 	<Hooks directory="Hooks">
+		<hook file="cosmeticsweaponbase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
 		<hook file="weaponfactorytweakdata.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
 		<hook file="weapontweakdata.lua" source_file="lib/tweak_data/weapontweakdata"/>
 	</Hooks>

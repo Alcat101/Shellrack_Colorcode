@@ -75,6 +75,12 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Dragon_stockpouch",
 			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_Flechette_stockpouch",
 			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_huntsman_shellrack/huntsman_HE_stockpouch"
+		},
+		["wpn_fps_shot_trench_s_rack"] = {
+			["wpn_fps_upg_a_slug"] = "units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_AP_srack",
+			["wpn_fps_upg_a_dragons_breath"] = "units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Dragon_srack",
+			["wpn_fps_upg_a_piercing"] = "units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_Flechette_srack",
+			["wpn_fps_upg_a_explosive"] = "units/mods/weapons/wpn_fps_shot_trench_shellrack/trench_HE_srack"
 		}
 	}
 	
@@ -84,7 +90,10 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 			if self.parts[ammo_id] then
 				self.parts[ammo_id].override = self.parts[ammo_id].override or {}
 				self.parts[ammo_id].override[rack_id] = { 
-					unit = matcfg_path
+					material_config = Idstring( matcfg_path ),
+					thq_material_config = Idstring( matcfg_path .. "_thq" ),
+					cc_material_config = Idstring( matcfg_path .. "_cc" ),
+					cc_thq_material_config = Idstring( matcfg_path .. "_cc_thq" )
 				}
 			end
 		end
@@ -98,7 +107,10 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 				if self.parts[ammo_id] then
 					self.parts[ammo_id].override = self.parts[ammo_id].override or {}
 					self.parts[ammo_id].override.wpn_fps_shot_m37_s_rack = { 
-						unit = matcfg_path
+						material_config = Idstring( matcfg_path ),
+						thq_material_config = Idstring( matcfg_path .. "_thq" ),
+						cc_material_config = Idstring( matcfg_path .. "_cc" ),
+						cc_thq_material_config = Idstring( matcfg_path .. "_cc_thq" )
 					}
 				end
 			end
@@ -111,7 +123,10 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 				if self.parts[ammo_id] then
 					self.parts[ammo_id].override = self.parts[ammo_id].override or {}
 					self.parts[ammo_id].override.wpn_fps_shot_huntsman_s_pouch = { 
-						unit = matcfg_path
+						material_config = Idstring( matcfg_path ),
+						thq_material_config = Idstring( matcfg_path .. "_thq" ),
+						cc_material_config = Idstring( matcfg_path .. "_cc" ),
+						cc_thq_material_config = Idstring( matcfg_path .. "_cc_thq" )
 					}
 				end
 			end
@@ -127,7 +142,19 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "ShellrackModInit", function(sel
 	end
 		
 	if BeardLib.Utils:FindMod("Trench Shotgun") then
-		--coming with the mod rework
+		if self.parts.wpn_fps_shot_trench_s_rack then
+			for ammo_id, matcfg_path in pairs(shell_id["wpn_fps_shot_trench_s_rack"]) do
+				if self.parts[ammo_id] then
+					self.parts[ammo_id].override = self.parts[ammo_id].override or {}
+					self.parts[ammo_id].override.wpn_fps_shot_trench_s_rack = { 
+						material_config = Idstring( matcfg_path ),
+						thq_material_config = Idstring( matcfg_path .. "_thq" ),
+						cc_material_config = Idstring( matcfg_path .. "_cc" ),
+						cc_thq_material_config = Idstring( matcfg_path .. "_cc_thq" )
+					}
+				end
+			end
+		end
 	end
 	
 	if BeardLib.Utils:FindMod("Baikal MP-153") then
