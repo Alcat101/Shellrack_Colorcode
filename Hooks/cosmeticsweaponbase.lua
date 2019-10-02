@@ -8,41 +8,8 @@ function NewRaycastWeaponBase:_update_materials()
 	local is_thq = self:is_npc() and self:use_thq()
 	is_thq = is_thq or not self:is_npc() and _G.IS_VR
 
-	if is_thq or use_cc_material_config then
-		if not self._materials then
-			local material_config_ids = Idstring("material_config")
-
-			for part_id, part in pairs(self._parts) do
-				local part_data = managers.weapon_factory:get_part_data_by_part_id_from_weapon(part_id, self._factory_id, self._blueprint)
-
-				if part_data then
-					local new_material_config_ids = self:_material_config_name(part_id, part_data, use_cc_material_config)
-
-					if part.unit:material_config() ~= new_material_config_ids and DB:has(material_config_ids, new_material_config_ids) then
-						part.unit:set_material_config(new_material_config_ids, true)
-					end
-				end
-			end
-
-			if use_cc_material_config then
-				self._materials = {}
-				self._materials_default = {}
-
-				for part_id, part in pairs(self._parts) do
-					local materials = part.unit:get_objects_by_type(Idstring("material"))
-
-					for _, m in ipairs(materials) do
-						if m:variable_exists(Idstring("wear_tear_value")) then
-							self._materials[part_id] = self._materials[part_id] or {}
-							self._materials[part_id][m:key()] = m
-						end
-					end
-				end
-			end
-		end
-	elseif self._materials then
-		local material_config_ids = Idstring("material_config")
-
+	local material_config_ids = Idstring("material_config")
+	if self._materials then
 		for part_id, part in pairs(self._parts) do
 			local part_data = managers.weapon_factory:get_part_data_by_part_id_from_weapon(part_id, self._factory_id, self._blueprint)
 			
@@ -56,6 +23,34 @@ function NewRaycastWeaponBase:_update_materials()
 		end
 
 		self._materials = nil
+	else
+		for part_id, part in pairs(self._parts) do
+			local part_data = managers.weapon_factory:get_part_data_by_part_id_from_weapon(part_id, self._factory_id, self._blueprint)
+
+			if part_data then
+				local new_material_config_ids = self:_material_config_name(part_data, use_cc_material_config)
+
+				if part.unit:material_config() ~= new_material_config_ids and DB:has(material_config_ids, new_material_config_ids) then
+					part.unit:set_material_config(new_material_config_ids, true)
+				end
+			end
+		end
+
+		if use_cc_material_config then
+			self._materials = {}
+			self._materials_default = {}
+
+			for part_id, part in pairs(self._parts) do
+				local materials = part.unit:get_objects_by_type(Idstring("material"))
+
+				for _, m in ipairs(materials) do
+					if m:variable_exists(Idstring("wear_tear_value")) then
+						self._materials[part_id] = self._materials[part_id] or {}
+						self._materials[part_id][m:key()] = m
+					end
+				end
+			end
+		end
 	end
 end
 
@@ -153,27 +148,29 @@ function NewRaycastWeaponBase:spawn_magazine_unit(pos, rot, hide_bullets)
 	return mag_unit
 end
 
-function NewRaycastWeaponBase:_material_config_name(part_id, part_td, use_cc_material_config, force_third_person)
-	force_third_person = force_third_person or _G.IS_VR
+function NewRaycastWeaponBase:_material_config_name(part_data, use_cc_material_config, force_third_person)
+	force_third_person = force_third_person or _G.IS_VR or self:is_npc()
 
-	if self:is_npc() or force_third_person then
-		if use_cc_material_config and part_td.cc_thq_material_config then
-			return part_td.cc_thq_material_config
+	if force_third_person then
+		if use_cc_material_config and part_data.cc_thq_material_config then
+			return part_data.cc_thq_material_config
 		end
 
-		if part_td.thq_material_config then
-			return part_td.thq_material_config
+		if part_data.thq_material_config then
+			return part_data.thq_material_config
 		end
-
-		local cc_string = use_cc_material_config and "_cc" or ""
-		local thq_string = (self:use_thq() or force_third_person) and "_thq" or ""
-
-		return Idstring(part_td.unit .. cc_string .. thq_string)
 	end
 
-	if use_cc_material_config and part_td.cc_material_config then
-		return part_td.cc_material_config
+	if use_cc_material_config and part_data.cc_material_config then
+		return part_data.cc_material_config
 	end
 
-	return Idstring(part_td.unit .. "_cc")
+	if not use_cc_material_config and not force_third_person and part_data.material_config then
+		return part_data.material_config
+	end
+
+	local cc_string = use_cc_material_config and "_cc" or ""
+	local thq_string = force_third_person and "_thq" or ""
+
+	return Idstring(part_data.unit .. cc_string .. thq_string)
 end
